@@ -1,43 +1,150 @@
 # 🚀 EC2 Linux Web Server Deployment using Apache HTTPD
 
-## 📌 Project Overview
-
-This project demonstrates how to deploy a simple website on an
-**AWS EC2 Linux instance** using the **Apache HTTPD web server**.
-
-The project covers:
-
-- ☁️ AWS EC2 Instance Creation
-- 🐧 Linux Server Configuration
-- 🛡️ Security Group Configuration
-- 🌐 Apache HTTPD Installation
-- 📄 HTML Website Deployment
-- 🔄 Apache Service Management
-- ✅ Website Verification
+![AWS](https://img.shields.io/badge/AWS-EC2-orange)
+![Linux](https://img.shields.io/badge/Linux-Amazon%20Linux-black)
+![Apache](https://img.shields.io/badge/Apache-HTTPD-red)
+![HTML](https://img.shields.io/badge/HTML5-orange)
+![CSS](https://img.shields.io/badge/CSS3-blue)
+![Git](https://img.shields.io/badge/Git-Version%20Control-orange)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black)
+![DevOps](https://img.shields.io/badge/DevOps-Project-green)
 
 ---
 
-## 🎯 Project Objective
+# 📌 EC2 Linux Web Server Deployment using Apache HTTPD
 
-The main objective of this project is to understand how to:
+## 👨‍💻 Project By
 
-1. Launch an AWS EC2 Linux instance.
-2. Connect to the Linux server using SSH.
-3. Install and configure Apache HTTPD.
-4. Deploy an HTML webpage.
-5. Start Apache and configure it to start automatically.
-6. Access the website using the EC2 Public IP.
+### Mohit Gadilohar
+
+**Cloud & DevOps Engineer**
 
 ---
 
-## ☁️ AWS EC2 Configuration
+# 📖 Table of Contents
 
-### Step 1: Create EC2 Instance
+- 📌 Project Overview
+- 🎯 Project Objective
+- 🏗️ Project Architecture
+- ☁️ Step 1: Create EC2 Instance
+- 🛡️ Step 2: Configure Security Group
+- 💻 Step 3: Connect to Linux Server
+- 👑 Step 4: Switch to Root User
+- 🔄 Step 5: Update Linux Packages
+- 📦 Step 6: Install Apache HTTPD
+- 📁 Step 7: Move to Website Directory
+- 📄 Step 8: Create HTML File
+- ✍️ Step 9: Edit HTML File
+- ▶️ Step 10: Start Apache
+- 🔁 Step 11: Enable Apache
+- 🔍 Step 12: Verify Apache
+- 🌍 Step 13: Access Website
+- ✅ Step 14: Expected Output
+- 🧾 Complete Command Summary
+- 🛠️ Technologies Used
+- 📚 Skills Learned
+- 🔧 Troubleshooting
+- 📸 Project Screenshots
+- 📁 Project Structure
+- 🔄 Project Workflow
+- 🎯 Project Outcome
+- 🏆 Conclusion
+- 👨‍💻 Author
 
-1. Login to the AWS Management Console.
-2. Open **EC2**.
-3. Click **Launch Instance**.
-4. Enter the instance name:
+---
+
+# 📌 Project Overview
+
+This project demonstrates how to create an **AWS EC2 Linux instance**
+and deploy a simple website using the **Apache HTTPD web server**.
+
+The complete project covers:
+
+☁️ AWS EC2 Instance Creation
+
+🐧 Linux Server Configuration
+
+🛡️ Security Group Configuration
+
+🔐 SSH Connection
+
+📦 Apache HTTPD Installation
+
+📁 Apache Website Directory
+
+📄 HTML Website Creation
+
+▶️ Apache Service Management
+
+🌍 Website Deployment
+
+✅ Website Verification
+
+This project provides practical experience in **AWS Cloud,
+Linux Administration, Apache Web Server, Networking,
+and Web Deployment**.
+
+---
+
+# 🎯 Project Objective
+
+The main objective of this project is to understand the complete
+process of deploying a website on an AWS EC2 Linux server.
+
+### Objectives
+
+✅ Launch an EC2 Linux instance
+
+✅ Configure Security Group rules
+
+✅ Connect to EC2 using SSH
+
+✅ Configure Linux server
+
+✅ Install Apache HTTPD
+
+✅ Create an HTML webpage
+
+✅ Deploy webpage to Apache
+
+✅ Start Apache Web Server
+
+✅ Enable Apache after reboot
+
+✅ Access website using Public IP
+
+---
+
+# 🏗️ Project Architecture
 
 ```text
-apache-web-server
+                         🌐 INTERNET
+                              |
+                              |
+                              ▼
+                    ┌──────────────────┐
+                    │    AWS EC2       │
+                    │   Linux Server   │
+                    └────────┬─────────┘
+                             |
+                             |
+                             ▼
+                    ┌──────────────────┐
+                    │  Apache HTTPD    │
+                    │    Web Server    │
+                    └────────┬─────────┘
+                             |
+                             |
+                             ▼
+                    ┌──────────────────┐
+                    │ /var/www/html    │
+                    │                  │
+                    │   index.html     │
+                    └────────┬─────────┘
+                             |
+                             |
+                             ▼
+                    ┌──────────────────┐
+                    │   Web Browser    │
+                    │       💻         │
+                    └──────────────────┘
